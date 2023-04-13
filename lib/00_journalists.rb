@@ -14,6 +14,7 @@ puts "Dans cet Array il y a #{twitter.count()} handles."
 
 
 clean
+
 #Quel est le handle le plus court de cette liste ?
 
 shorter = 381
@@ -47,19 +48,8 @@ p Array(array_6)
 
 clean
 #Combien commencent par une majuscule (première lettre juste après le @) ?
-    #def consigne4_OPTI
-    #  puts twitter.select { |word| word =~ /^@[A-Z]/ }.count
-    #end
 
-compteur = 0
-twitter.each do |handle|
-  if handle[1] == handle[1].upcase
-    compteur = compteur + 1
-  end
-end
-puts "Il y en a #{compteur} qui commencent par une majuscule"
-
-
+puts twitter.count { |word| word =~ /^@[A-Z]/ }
 
 #Trie la liste de handle par ordre alphabétique.
 
